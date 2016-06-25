@@ -23,7 +23,7 @@ install:
 
 script:
   - hexo clean
-  - hexo d -g --silent
+  - hexo g -d --silent
 
 cache:
   directories:
