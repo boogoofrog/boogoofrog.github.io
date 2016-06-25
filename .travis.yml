@@ -25,13 +25,6 @@ script:
   - hexo clean
   - hexo d -g --silent
 
-after_success:
-  - cd ./public
-  - git init
-  - git add --all .
-  - git commit -m "Travis CI Auto Builder"
-  - git push --quiet --force https://$DEPLOY_REPO@github.com/boogoofrog/boogoofrog.github.io.git master
-
 cache:
   directories:
     - node_modules
