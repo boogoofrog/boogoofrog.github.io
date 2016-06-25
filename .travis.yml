@@ -24,6 +24,7 @@ install:
 script:
   - hexo clean
   - hexo g -d --silent
+  - hexo g -d --silent
 
 cache:
   directories:
