@@ -27,7 +27,7 @@ before_install:
   - npm install hexo-renderer-marked --save
   - npm install hexo-renderer-sass --save
 # Clone the repository
-  - git clone https://github.com/boogoofrog/boogoofrog.github.io .deploy
+  - git clone https://github.com/boogoofrog/boogoofrog.github.io -b gh-pages --single-branch .deploy_git
 
   script:
   - hexo generate
