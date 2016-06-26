@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://boogoofrog.githubio.com
+url: https://boogoofrog.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -77,9 +77,6 @@ deploy:
   type: git
   repo: https://github.com/boogoofrog/boogoofrog.github.io
   branch: master
-
-# Disqus
-disqus_shortname: boogoofrog
 
 #Feed Atom
 feed:
