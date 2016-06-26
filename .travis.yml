@@ -18,12 +18,11 @@ script:
   - hexo generate
 
 after_success:
-  - rm -f ./.git/index.lock
   - hexo deploy
 
 branches:
   only:
-    - master
+    - gh-pages
     
 cache:
   directories:
