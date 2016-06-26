@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>後見之明的偏誤</title>
+  <subtitle>QQ</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://boogoofrog.github.io/"/>
+  <updated>2016-06-26T06:41:42.000Z</updated>
+  <id>https://boogoofrog.github.io/</id>
+  
+  <author>
+    <name>boogoofrog</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello halo</title>
+    <link href="https://boogoofrog.github.io/2016/05/30/Hello-halo/"/>
+    <id>https://boogoofrog.github.io/2016/05/30/Hello-halo/</id>
+    <published>2016-05-30T14:29:51.000Z</published>
+    <updated>2016-06-26T06:41:42.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Yeah! 第一篇Markdown先來試試看一些基本的語法ㄅ！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;試試看試試看～&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;懶得試了Zzzzzz&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Yeah! 第一篇Markdown先來試試看一些基本的語法ㄅ！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;試試看試試看～&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;懶得試了Zzzzzz&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
