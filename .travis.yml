@@ -15,7 +15,10 @@ install:
 
 script:
   - hexo clean
-  - hexo g -d
+  - hexo g
+
+after_success:
+  - hexo deploy
 
 branches:
   only:
