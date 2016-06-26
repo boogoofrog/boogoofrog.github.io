@@ -1,5 +1,4 @@
 language: node_js
-
 node_js:
   - "5"
 
@@ -29,7 +28,7 @@ before_install:
 # Clone the repository
   - git clone https://github.com/boogoofrog/boogoofrog.github.io -b gh-pages --single-branch .deploy_git
 
-  script:
+script:
   - hexo generate
   - hexo deploy
 
