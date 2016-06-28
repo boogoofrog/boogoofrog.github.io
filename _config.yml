@@ -76,7 +76,7 @@ archive_generator:
 deploy:
   type: git
   repo: https://github.com/boogoofrog/boogoofrog.github.io
-  branch: master
+  branch: hexo-source
 
 #Feed Atom
 feed:

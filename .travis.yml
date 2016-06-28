@@ -14,7 +14,7 @@ script:
   - git config --global user.name "boogoofrog"
   - git config --global user.email boogoofrog@gmail.com
   - git config --global push.default simple
-  - git clone --depth 1 --branch gh-pages https://$GH_TOKEN@github.com/boogoofrog/boogoofrog.github.io public
+  - git clone --depth 1 --branch master https://$GH_TOKEN@github.com/boogoofrog/boogoofrog.github.io public
   # Generate Hexo static pages
   - hexo g
   - cd public
