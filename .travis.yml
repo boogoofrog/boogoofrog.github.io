@@ -1,29 +1,22 @@
 language: node_js
 node_js:
-  - "5"
-
-before_install:
-  - git config --global push.default matching
-  - git config --global user.name "boogoofrog"
-  - git config --global user.email boogoofrog@gmail.com
-  - sed -i'' "/^ *repo/s~github\.com~${DEPLOY_REPO}@github.com~" _config.yml
-
+- '5'
+env:
+  global:
+    secure: Gbz7sa8bBjEHlJx/vTluWBVl2awVVa0hvidheTiTGLv/WGqxE9lFL1cueSnmlHCXEsuD2KO0mkybveqmM/L218WHPLfFnOaW3RnBtscru4eN8eOD8dlMZM0Lixl/7lhj7w6aN7nWLGEzpa81tTWQCNfQChkK2os2g96g0Y8jgDHtxveotveejmgZ91a7gSAlvmzDqxOuTyMKS5NmYgQ1dfJvEYeH0Kox5qJLc4T13mBEHZmkg8VCQybv6U6TJXsrrcACaFRyz07dRR2Ej7QHJL/isyEpu+ZSe3JKAXDlbRnna9XJhIZzf5J6cnGw51on5dNTJmaVnSdbkgNFzHnZO0DWHJtOaPoMYaZk1FEPF7aAiAiROlIHrknOJQiAbRD+4kGTKTvSqPIx4VN/uOpL/6JcK5gpUZo/u3Hq8EXcASOGOOK3OtmQHJyGT6vY5SHNUUCAZbf1GVvaknDsG/uxgZU6hf6xxGuDHDlVXkmztCzIGKtCt1Ln9jww0PEsN5wC+17BpS0//7DUk/Jj0tInii4cSUSAXYM2etK7Sc5e6tgR0ui1RQLNEsoTCfnyk4gth6ExK9itQxrgD6DolW5r+hzej4f6W/lFJGPblpOD01JX9DR/Bu0qQq6qCJIbSjPjyVYp/IUDk4u659LCSAwmp1WA6px7StWR8SUJFl6R5R4=
 install:
   - npm install hexo-cli -g
-  - npm install hexo --save
   - npm install
-
 script:
-  - hexo clean
-  - hexo generate
-
-after_success:
-  - hexo deploy
-
-branches:
-  only:
-    - gh-pages
-    
-cache:
-  directories:
-    - node_modules
+  # Set Git config
+  - git config --global user.name "boogoofrog"
+  - git config --global user.email boogoofrog@gmail.com
+  - git config --global push.default simple
+  - git clone --depth 1 --branch gh-pages https://$GH_TOKEN@github.com/boogoofrog/boogoofrog.github.io public
+  # Generate Hexo static pages
+  - hexo g
+  - cd public
+  - git add -A .
+  - MESSAGE=`date +\ %Y-%m-%d\ %H:%M:%S`
+  - git commit -m "Site updated:$MESSAGE"
+  - git push --quiet
