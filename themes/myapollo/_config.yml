@@ -1,7 +1,7 @@
 menu:
     Blog: /
     Archive: /archives/
-    Weibo: 
+    Facebook: https://www.facebook.com/yunian.chen
     GitHub: https://github.com/boogoofrog
     Rss: /atom.xml
 
@@ -9,13 +9,12 @@ favicon: /favicon.png
 logo: /favicon.png
 
 # Comment
-# e.g disqus: seansun
 disqus: boogoofrog
 duoshuo: 
 
 # Analytics
 # google-analytics:
-ga: UA-65933410-1
+ga: UAd-78533039-1
 
 # Copyright Infomation
 startyear: 2016
@@ -24,3 +23,5 @@ startyear: 2016
 #true : use google fonts api, not stable for chinese visitor sometimes, caused by force majeure factor
 #false: use useso fonts api instead of google's, great response speed for chinese visitor
 googlefonts: false
+
+language: zh-tw
