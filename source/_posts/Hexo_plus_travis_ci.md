@@ -6,5 +6,4 @@ tags: Travis CI
 
 幹！
 
-![Image of Cameron]
-(http://i.imgur.com/qNlwBOL.gif)
+![Image of Cameron](http://i.imgur.com/qNlwBOL.gif)
