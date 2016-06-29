@@ -75,7 +75,7 @@ archive_generator:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/boogoofrog/boogoofrog.github.io
+  repo: git@github.com:boogoofrog/boogoofrog.github.io
   branch: master
 
 #Feed Atom
