@@ -12,3 +12,6 @@ tags: Travis CI
 ![Image of Cameron](http://i.imgur.com/qNlwBOL.gif)
 
 在此就把這兩天遇到的坑整理一下...
+
+###參考資料
+- [用 Travis CI 自動部署網站到 GitHub] (https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/)
