@@ -17,11 +17,8 @@ script:
   - git clone --depth 1 --branch master https://$GH_TOKEN@github.com/boogoofrog/boogoofrog.github.io public
   # Generate Hexo static pages
   - hexo g
-  - cd public
-  - git add -A .
-  - MESSAGE=`date +\ %Y-%m-%d\ %H:%M:%S`
-  - git commit -m "Site updated:$MESSAGE"
-  - git push --quiet
+after_success:
+  - hexo deploy
 branches:
   only:
   - hexo-source
