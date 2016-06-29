@@ -4,6 +4,12 @@ date: 2016-06-29 21:32:51
 tags: Travis CI
 ---
 
-幹！
+裝了Hexo之後發現，要寫文章一定要install Hexo在你那一台電腦。
+看～那乾脆回去用medium或logdown就好啦。
 
+爬了一下往網路上的神文，發現可以搭配Travis做auto deployment，
+興沖沖的我想說應該一兩個小時就可以搞定。
+沒想到花了我整整兩天時間﹍
 ![Image of Cameron](http://i.imgur.com/qNlwBOL.gif)
+
+在此就把這兩天遇到的坑分享一下﹍
