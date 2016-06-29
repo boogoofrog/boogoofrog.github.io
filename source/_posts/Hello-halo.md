@@ -1,7 +1,7 @@
 ---
-title: Hello halo
+title: Hello Hexo
 date: 2016-05-30 22:29:51
-tags:
+tags: Hexo
 ---
 
 Yeah! 第一篇Markdown先來試試看一些基本的語法ㄅ！
