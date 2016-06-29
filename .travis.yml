@@ -22,3 +22,6 @@ script:
   - MESSAGE=`date +\ %Y-%m-%d\ %H:%M:%S`
   - git commit -m "Site updated:$MESSAGE"
   - git push --quiet
+branches:
+  only:
+  - hexo-source
