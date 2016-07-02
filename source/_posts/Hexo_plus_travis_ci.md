@@ -12,6 +12,19 @@ tags: Travis CI
 ![Image of Cameron](http://i.imgur.com/qNlwBOL.gif)
 
 在此就把這兩天遇到的坑整理一下...
-
+- 如果domain是`xxx.github.io`，branch[一定要是master](https://help.github.com/articles/user-organization-and-project-pages/)，一開始忘記這件事浪費一堆時間
+- .travis.yml file format
+  - [x] Correct
+  ```
+  script:
+    - hexo g
+  ```
+  - [ ] Incorrect
+  ```
+  script:
+  - hexo g
+  ```
+- 
+不過我發現最快的方式就是[去看別人的.travis.yml](https://github.com/boogoofrog/boogoofrog.github.io/blob/hexo-source/.travis.yml) lol
 ### 參考資料
-- [用 Travis CI 自動部署網站到 GitHub](https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/)
+-[用 Travis CI 自動部署網站到 GitHub](https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/)
