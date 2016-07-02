@@ -33,6 +33,6 @@ tags: Travis CI
 
 不過我發現最快的方式就是[去看別人的.travis.yml](https://github.com/boogoofrog/boogoofrog.github.io/blob/hexo-source/.travis.yml) lol
 
-### 參考資料
+## 參考資料
 - [用 Travis CI 自動部署網站到 GitHub](https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/)
 - [使用Travis CI自动构建hexo博客](http://magicse7en.github.io/2016/03/27/travis-ci-auto-deploy-hexo-github/)
