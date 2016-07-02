@@ -9,6 +9,7 @@ tags: Travis CI
 
 爬了一下網路上的神文，發現可以搭配Travis做auto deployment，興沖沖的想說應該一兩個小時就可以搞定。
 沒想到花了我整整兩天時間...
+<!--more-->
 ![Image of Cameron](http://i.imgur.com/qNlwBOL.gif)
 
 在此就把這兩天遇到的問題整理一下:
