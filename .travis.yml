@@ -17,9 +17,10 @@ before_script:
   - git config --global user.email boogoofrog@gmail.com
   - git config --global push.default simple
 script:
+  - hexo clean
   - hexo g
 after_success:
-  - hexo deploy
+  - hexo d
 branches:
   only:
   - hexo-source
