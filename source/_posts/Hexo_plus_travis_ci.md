@@ -14,12 +14,12 @@ tags: Travis CI
 在此就把這兩天遇到的問題整理一下:
 - 如果domain是`xxx.github.io`，branch[一定要是master](https://help.github.com/articles/user-organization-and-project-pages/)，一開始忘記這件事結果浪費我一堆時間QQ
 - .travis.yml file format
-  _Correct_
+  **Correct**
   ```
   script:
     - hexo g
   ```
-  _Incorrect_
+  **Incorrect**
   ```
   script:
   - hexo g
