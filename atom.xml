@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>後見之明的偏誤</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://boogoofrog.github.io/"/>
+  <updated>2017-01-18T15:08:18.659Z</updated>
+  <id>https://boogoofrog.github.io/</id>
+  
+  <author>
+    <name>boogoofrog</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ways to keep yourself up-to-date</title>
+    <link href="https://boogoofrog.github.io/2017/01/16/Keep_up_to_date/"/>
+    <id>https://boogoofrog.github.io/2017/01/16/Keep_up_to_date/</id>
+    <published>2017-01-16T02:16:00.000Z</published>
+    <updated>2017-01-18T15:08:18.659Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天來列出身為一位<del>肥宅</del>軟體工程師，定期會更新的資訊來源。</p>
+<a id="more"></a>
+<ol>
+<li>Hacker News <code>https://news.ycombinator.com/</code></li>
+<li>Hacker Noon <code>https://hackernoon.com/</code></li>
+<li>Github trand <code>https://github.com/trending/javascript</code></li>
+<li>Reddit <code>https://www.reddit.com/r/webdev/</code></li>
+<li>PTT Soft_Job</li>
+<li>Facebook特定程式語言社團, React Taiwan, blah..blah..blah..</li>
+</ol>
+<p>最後，再把這些資訊consolidate到你的feedly吧！<br>不求多，我覺得要消化這些東西每天30分鐘以內應該就夠了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天來列出身為一位&lt;del&gt;肥宅&lt;/del&gt;軟體工程師，定期會更新的資訊來源。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue.js的各種坑</title>
+    <link href="https://boogoofrog.github.io/2017/01/07/Things_to_know_vue_js/"/>
+    <id>https://boogoofrog.github.io/2017/01/07/Things_to_know_vue_js/</id>
+    <published>2017-01-07T08:54:51.000Z</published>
+    <updated>2017-01-18T15:08:18.659Z</updated>
+    
+    <content type="html"><![CDATA[<ol>
+<li>Typo, module.exports insted of module.export</li>
+<li>Familiar the difference between webpack and webpack-dev-server</li>
+<li>Better to put index.html within dist folder(with bundle.js).</li>
+<li>webpack-dev-server -&gt; iframe mode, webpack-dev-server –inline -&gt; inline mode, without status bar </li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;Typo, module.exports insted of module.export&lt;/li&gt;
+&lt;li&gt;Familiar the difference between webpack and webpack-dev-server&lt;/li&gt;
+&lt;li&gt;Bette
+    
+    </summary>
+    
+    
+      <category term="Vuejs, webpack" scheme="https://boogoofrog.github.io/tags/Vuejs-webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Serverless</title>
+    <link href="https://boogoofrog.github.io/2016/07/10/Introduction_to_serverless/"/>
+    <id>https://boogoofrog.github.io/2016/07/10/Introduction_to_serverless/</id>
+    <published>2016-07-10T09:38:51.000Z</published>
+    <updated>2017-01-18T15:08:18.659Z</updated>
+    
+    <content type="html"><![CDATA[<p>感恩serverless！讚嘆serverless！<br>太神啦~~</p>
+<a id="more"></a>
+<p><img src="http://i.imgur.com/8fVDCdt.gif" alt="Video"></p>
+<p>2017-01-08更新:</p>
+<p>這篇實在太混啦…<br>Serverless是挺非常適合chatbot或流量需求較低的服務<del>或邊緣人QQ</del>的架構，稍晚再補上一篇serveless+bot的手把手！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;感恩serverless！讚嘆serverless！&lt;br&gt;太神啦~~&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Serverless" scheme="https://boogoofrog.github.io/tags/Serverless/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo搭配Travis CI</title>
+    <link href="https://boogoofrog.github.io/2016/06/29/Hexo_plus_travis_ci/"/>
+    <id>https://boogoofrog.github.io/2016/06/29/Hexo_plus_travis_ci/</id>
+    <published>2016-06-29T13:32:51.000Z</published>
+    <updated>2017-01-18T15:08:18.659Z</updated>
+    
+    <content type="html"><![CDATA[<p>裝了Hexo之後發現，要寫文章一定要install Hexo在你那一台電腦。<br>看～這樣不是比medium或logdown還要差QQ</p>
+<p>爬了一下網路上的神文，發現可以搭配Travis做auto deployment，興沖沖的想說應該一兩個小時就可以搞定。<br>沒想到花了我整整兩天時間…<br><a id="more"></a><br><img src="http://i.imgur.com/qNlwBOL.gif" alt="Image of Cameron"></p>
+<p>在此就把這兩天遇到的問題整理一下:</p>
+<ul>
+<li>如果domain是<code>xxx.github.io</code>，branch<a href="https://help.github.com/articles/user-organization-and-project-pages/" target="_blank" rel="external">一定要是master</a>，一開始忘記這件事結果浪費我一堆時間QQ</li>
+<li><p>.travis.yml file format<br><strong>Correct</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">script:</div><div class="line">  - hexo g</div></pre></td></tr></table></figure>
+<p><strong>Incorrect</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">script:</div><div class="line">- hexo g</div></pre></td></tr></table></figure>
+</li>
+<li><p>Clone下來的theme不會加到git裡面，為了方便我就直接把theme改名字客製成我想要的樣子。</p>
+</li>
+</ul>
+<p>有個重要觀念，hexo的source放在branch(包含theme, posts, pages)，deploy的static html放在master。Travis config中指定branch執行ops，hexo config中指定master為deployment的位置，祖國同胞有畫了一個<a href="http://magicse7en.github.io/img/travis-ci-work-flow.png" target="_blank" rel="external">流程圖</a>，<del>不過台灣不是中國的一部份</del>，可以參考一下。</p>
+<blockquote>
+<p>後記：他好像畫錯了，哈哈祖國哈哈。</p>
+</blockquote>
+<p>總而言之，一些基礎的東西看似簡單但常會忽略，像是Travis的life cycle、Github token跟Travic CI的關係或Github的權限這類雜魚問題，魔鬼總是藏在細節裡。看Travis的console就可以很清楚知道你錯在哪一個步驟，<del>比jenkins好看多了</del>。</p>
+<p>不過我發現最快的方式就是<a href="https://github.com/boogoofrog/boogoofrog.github.io/blob/hexo-source/.travis.yml" target="_blank" rel="external">去看別人的.travis.yml</a> lol</p>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><ul>
+<li><a href="https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/" target="_blank" rel="external">用 Travis CI 自動部署網站到 GitHub</a></li>
+<li><a href="http://magicse7en.github.io/2016/03/27/travis-ci-auto-deploy-hexo-github/" target="_blank" rel="external">使用Travis CI自动构建hexo博客</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;裝了Hexo之後發現，要寫文章一定要install Hexo在你那一台電腦。&lt;br&gt;看～這樣不是比medium或logdown還要差QQ&lt;/p&gt;
+&lt;p&gt;爬了一下網路上的神文，發現可以搭配Travis做auto deployment，興沖沖的想說應該一兩個小時就可以搞定。&lt;br&gt;沒想到花了我整整兩天時間…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Travis CI" scheme="https://boogoofrog.github.io/tags/Travis-CI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello Hexo</title>
+    <link href="https://boogoofrog.github.io/2016/05/30/Hello-halo/"/>
+    <id>https://boogoofrog.github.io/2016/05/30/Hello-halo/</id>
+    <published>2016-05-30T14:29:51.000Z</published>
+    <updated>2017-01-18T15:08:18.659Z</updated>
+    
+    <content type="html"><![CDATA[<p>Yeah! 第一篇Markdown先來試試看一些基本的語法ㄅ！</p>
+<blockquote>
+<p>試試看試試看～</p>
+<blockquote>
+<p>懶得試了Zzzzzz</p>
+</blockquote>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Yeah! 第一篇Markdown先來試試看一些基本的語法ㄅ！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;試試看試試看～&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;懶得試了Zzzzzz&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="https://boogoofrog.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>

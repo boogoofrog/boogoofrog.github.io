@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="zh-tw"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Hexo搭配Travis CI · 後見之明的偏誤</title><meta name="description" content="Hexo搭配Travis CI - boogoofrog"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://www.facebook.com/yunian.chen" target="_blank" class="nav-list-link">FACEBOOK</a></li><li class="nav-list-item"><a href="https://github.com/boogoofrog" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://www.linkedin.com/in/richi-yu-nien-chen-4989a07a" target="_blank" class="nav-list-link">LINKEDIN</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Hexo搭配Travis CI</h1><div class="post-info">2016年6月29日</div><div class="post-content"><p>裝了Hexo之後發現，要寫文章一定要install Hexo在你那一台電腦。<br>看～這樣不是比medium或logdown還要差QQ</p>
+<p>爬了一下網路上的神文，發現可以搭配Travis做auto deployment，興沖沖的想說應該一兩個小時就可以搞定。<br>沒想到花了我整整兩天時間…<br><a id="more"></a><br><img src="http://i.imgur.com/qNlwBOL.gif" alt="Image of Cameron"></p>
+<p>在此就把這兩天遇到的問題整理一下:</p>
+<ul>
+<li>如果domain是<code>xxx.github.io</code>，branch<a href="https://help.github.com/articles/user-organization-and-project-pages/" target="_blank" rel="external">一定要是master</a>，一開始忘記這件事結果浪費我一堆時間QQ</li>
+<li><p>.travis.yml file format<br><strong>Correct</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">script:</div><div class="line">  - hexo g</div></pre></td></tr></table></figure>
+<p><strong>Incorrect</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">script:</div><div class="line">- hexo g</div></pre></td></tr></table></figure>
+</li>
+<li><p>Clone下來的theme不會加到git裡面，為了方便我就直接把theme改名字客製成我想要的樣子。</p>
+</li>
+</ul>
+<p>有個重要觀念，hexo的source放在branch(包含theme, posts, pages)，deploy的static html放在master。Travis config中指定branch執行ops，hexo config中指定master為deployment的位置，祖國同胞有畫了一個<a href="http://magicse7en.github.io/img/travis-ci-work-flow.png" target="_blank" rel="external">流程圖</a>，<del>不過台灣不是中國的一部份</del>，可以參考一下。</p>
+<blockquote>
+<p>後記：他好像畫錯了，哈哈祖國哈哈。</p>
+</blockquote>
+<p>總而言之，一些基礎的東西看似簡單但常會忽略，像是Travis的life cycle、Github token跟Travic CI的關係或Github的權限這類雜魚問題，魔鬼總是藏在細節裡。看Travis的console就可以很清楚知道你錯在哪一個步驟，<del>比jenkins好看多了</del>。</p>
+<p>不過我發現最快的方式就是<a href="https://github.com/boogoofrog/boogoofrog.github.io/blob/hexo-source/.travis.yml" target="_blank" rel="external">去看別人的.travis.yml</a> lol</p>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><ul>
+<li><a href="https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/" target="_blank" rel="external">用 Travis CI 自動部署網站到 GitHub</a></li>
+<li><a href="http://magicse7en.github.io/2016/03/27/travis-ci-auto-deploy-hexo-github/" target="_blank" rel="external">使用Travis CI自动构建hexo博客</a></li>
+</ul>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/07/10/Introduction_to_serverless/" class="prev">上一篇</a><a href="/2016/05/30/Hello-halo/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'boogoofrog';
+var disqus_identifier = '2016/06/29/Hexo_plus_travis_ci/';
+var disqus_title = 'Hexo搭配Travis CI';
+var disqus_url = 'https://boogoofrog.github.io/2016/06/29/Hexo_plus_travis_ci/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//boogoofrog.disqus.com/count.js" async></script><div class="copyright"><p>© 2016 - 2017 <a href="https://boogoofrog.github.io">boogoofrog</a>, unless otherwise noted.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-78533039-1",'auto');ga('send','pageview');</script></body></html>
