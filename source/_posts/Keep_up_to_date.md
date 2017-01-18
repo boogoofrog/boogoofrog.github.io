@@ -5,6 +5,8 @@ tags:
 ---
 
 今天來列出身為一位~~肥宅~~軟體工程師，定期會更新的資訊來源。
+
+<!--more-->
 1. Hacker News `https://news.ycombinator.com/`
 2. Hacker Noon `https://hackernoon.com/`
 3. Github trand `https://github.com/trending/javascript`
